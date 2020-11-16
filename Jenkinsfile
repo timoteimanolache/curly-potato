@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('web-platform-engineering@release/v12') _
+@Library('web-platform-engineering@feature/QSR-977-modify-start-of-pipeline-steps-to-have-github-and-bitbucket-strategies') _
 
 npmPackage('curly-potato',
     testPipeline: true,
