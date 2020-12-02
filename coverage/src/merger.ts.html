@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/merger.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> merger.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.26% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>36/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.24% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>30/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">143×</span>
+<span class="cline-any cline-yes">143×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">143×</span>
+<span class="cline-any cline-yes">400×</span>
+<span class="cline-any cline-yes">98×</span>
+<span class="cline-any cline-yes">98×</span>
+<span class="cline-any cline-yes">98×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Inspired by https://github.com/bigShai/extendify
+// This variation is built in TypeScript, allows for type preservation
+// and fixes https://github.com/bigShai/extendify/issues/8
+&nbsp;
+import * as _ from 'lodash';
+&nbsp;
+export type BehaviourName = 'replace' | 'concat' | 'merge' | 'or' | 'and';
+&nbsp;
+type TypeOptionName = 'arrays' | 'booleans' | 'numbers' | 'strings';
+&nbsp;
+export interface TypeOptions {
+    arrays?: BehaviourName;
+    booleans?: BehaviourName;
+    numbers?: BehaviourName;
+    strings?: BehaviourName;
+}
+&nbsp;
+export interface Options extends TypeOptions {
+    inPlace?: boolean;
+    isDeep?: boolean;
+    preserveTypes?: boolean;
+}
+&nbsp;
+const defaultTypeBehaviours: TypeOptions = {
+    arrays: 'merge',
+    booleans: 'replace',
+    numbers: 'replace',
+    strings: 'replace'
+};
+&nbsp;
+const typeCheckers: {[name in TypeOptionName]: (value: any) =&gt; boolean} = {
+    arrays: _.isArray,
+    booleans: _.isBoolean,
+    numbers: _.isNumber,
+    strings: _.isString
+};
+&nbsp;
+const coerceArray = w =&gt; (_.isArray(w) || _.isString(w)) ? w : (_.isBoolean(w) || _.isNumber(w) ? <span class="branch-0 cbranch-no" title="branch not covered" >[w] </span>: []);
+&nbsp;
+const coerce = (w, type: TypeOptionName) =&gt; {
+    switch (type) {
+        case 'arrays':
+            return coerceArray(w);
+        case 'booleans':
+            return w === 'false' ? false : !!w;
+        case 'numbers':
+            return +w || <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+        case 'strings':
+            return w + '' || <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return w;</span>
+};
+&nbsp;
+type Behaviour = (x: any, y: any) =&gt; any;
+&nbsp;
+const behaviours: {[name in BehaviourName]: Behaviour} = {
+    replace: (x, y) =&gt; y === undefined ? x : y,
+    concat: (x, y) =&gt; coerceArray(x).concat(coerceArray(y)),
+    or: (x, y)  =&gt;  <span class="cstat-no" title="statement not covered" >x || y,</span>
+    and: (x, y) =&gt; <span class="cstat-no" title="statement not covered" >x &amp;&amp; y,</span>
+    merge: undefined
+};
+&nbsp;
+export const getMerger = ({inPlace = true, isDeep = true, preserveTypes = false, ...options}: Options) =&gt; {
+    let merger;
+    const callback = (x, y) =&gt; {
+        const sample = preserveTypes ? (x !== undefined ? x : y) : y;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!isDeep &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >_.isPlainObject(sample))</span> {
+<span class="cstat-no" title="statement not covered" >            return sample;</span>
+        }
+        for (const type in typeCheckers) {
+            if (typeCheckers[type](sample)) {
+                const behaviour = behaviours[options[type] || defaultTypeBehaviours[type]] || merger;
+                const value = behaviour(x, y);
+                return preserveTypes &amp;&amp; x !== undefined ? coerce(value, type as TypeOptionName) : value || undefined;
+            }
+        }
+        return undefined;
+    };
+&nbsp;
+    merger = (...args) =&gt; {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!inPlace) {
+            args[0] = _.clone(args[0], isDeep);
+        }
+        args.push(callback);
+        return _.merge(...args);
+    };
+&nbsp;
+    return merger;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 09 2018 11:11:30 GMT-0500 (EST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
