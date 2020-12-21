@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('web-platform-engineering@feature/QSR-977-modify-start-of-pipeline-steps-to-have-github-and-bitbucket-strategies') _
+@Library('web-platform-engineering@feature/QSR-996-handle-master-branch-name-change-in-github') _
 
 npmPackage('curly-potato',
     testPipeline: true,
