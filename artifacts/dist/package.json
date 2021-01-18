@@ -2,15 +2,6 @@
   "name": "@solarwinds/test-pipeline-npm-package",
   "description": "Empty",
   "main": "index.js",
-  "scripts": {
-    "build": "node build.js",
-    "build:demo": "node build-demo.js",
-    "test": "exit 0",
-    "lint": "exit 0",
-    "i18n": "exit 0",
-    "i18n:demo": "exit 0",
-    "bundle-analysis": "exit 0"
-  },
   "repository": {
     "type": "git",
     "url": "https://bitbucket.solarwinds.com/scm/msp-pe/test-pipeline-npm-package.git"
